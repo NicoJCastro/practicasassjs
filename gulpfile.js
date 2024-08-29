@@ -26,7 +26,13 @@ export function dev(){
     watch('src/js/*.js', js);    
 }
 
-export default series(css, js, dev); // This is the default task that will run when you run gulp in the terminal 
+// export default series(css, js, dev);  This is the default task that will run when you run gulp in the terminal 
+
+// Tarea build para construir solo los archivos, sin el watch
+export const build = series(css, js); 
+
+// La tarea por defecto solo ejecuta la construcción
+export default build;
 
 // pararel ejecuta todas las tareas al mismo tiempo
 // export default parallel(css, js, dev); // This is the default task that will run when you run gulp in the terminal
