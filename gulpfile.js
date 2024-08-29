@@ -20,7 +20,7 @@ done();
 }
 
 export function html(done) {
-    src('src/*.html')
+    src('*.html')
         .pipe(dest('dist'));
     done();
 }
