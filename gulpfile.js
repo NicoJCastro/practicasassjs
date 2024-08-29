@@ -28,6 +28,10 @@ export function dev(){
 
 export default series(css, js, dev); // This is the default task that will run when you run gulp in the terminal 
 
+export function build(done) {
+    series(css, js)(done);
+  }
+
 
 // pararel ejecuta todas las tareas al mismo tiempo
 // export default parallel(css, js, dev); // This is the default task that will run when you run gulp in the terminal
